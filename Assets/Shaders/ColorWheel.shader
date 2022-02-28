@@ -96,7 +96,7 @@ Shader "Custom/ColorWheel" {
             static inline fixed3 color_wheel(in fixed x, in fixed y, in fixed delta_phi)
             {
                 fixed rho = sqrt(x * x + y * y);
-                fixed phi = (int)(y <= 0) + atan2(y, x) / (UNITY_TWO_PI);
+                fixed phi = (int)(y <= 0) + atan2(y, x) / UNITY_TWO_PI;
 
                 fixed h = (phi + delta_phi) % 1;
                 fixed s = 1;
